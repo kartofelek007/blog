@@ -11,8 +11,17 @@ jobs:
     - name: ⚙ Setup Node
       uses: actions/setup-node@v3
 
-    - name: 🎅 Build
-      run: npm run build
+    - name: Install
+      shell: "bash"
+      run: |
+        cd blog
+        npm install
+
+    - name: Build
+      shell: "bash"
+      run: |
+        cd blog
+        npm run build
 
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
