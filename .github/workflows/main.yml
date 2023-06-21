@@ -28,5 +28,6 @@ jobs:
         username: kursjspl
         port: 5522
         password: ${{ secrets.FTP_PASSWORD }}
+        protocol: ftps
         local-dir: dist/
         server-dir: domains/domanart.pl/blog/
