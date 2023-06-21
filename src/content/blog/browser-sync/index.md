@@ -6,7 +6,6 @@ tags: ["gulp", "Browsersync"]
 
 Browser-sync czyli jedna z najlepszych rzeczy jakie wymyślił człowiek. W tym tekście kilka ustawień by przyjemniej nam się z nim pracowało.
 
-
 <!--more-->
 ## Co to jest Browsersync
 Browsersync to narzędzie, które po odpaleniu serwuje nam stronę na na mikro serwerze.
