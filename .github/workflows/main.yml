@@ -24,8 +24,8 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
-        server: 51.83.140.105
-        username: kursjspl
+        server: ${{ secrets.FTP_URL }}
+        username: ${{ secrets.FTP_USER }}
         port: 5522
         password: ${{ secrets.FTP_PASSWORD }}
         protocol: ftps
