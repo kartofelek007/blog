@@ -26,7 +26,7 @@ jobs:
       with:
         server: ${{ secrets.FTP_URL }}
         username: ${{ secrets.FTP_USER }}
-        port: 5522
+        port: 21
         password: ${{ secrets.FTP_PASSWORD }}
         protocol: ftps
         local-dir: dist/
