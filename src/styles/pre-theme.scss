@@ -1,0 +1,104 @@
+.pre-cnt {
+	margin: 2rem 0;
+}
+
+.pre-language {
+	color: inherit;
+	font-weight: 600;
+	font-size: 0.9em;
+	line-height: 1em;
+}
+
+pre[class*="language-"] {
+	margin: 0;
+
+	white-space: pre;
+	color: inherit;
+
+	.token.comment,
+	.token.prolog,
+	.token.doctype,
+	.token.cdata {
+		color: inherit;
+	}
+
+	.token.punctuation {
+		color: inherit;
+	}
+
+	.namespace {
+		opacity: .7;
+	}
+
+	.token.operator,
+	.token.entity,
+	.token.url,
+	.language-css,
+	.token.string,
+	.style .token.string,
+	.token.variable {
+		color: inherit;
+	}
+
+	.token.property,
+	.token.tag,
+	.token.boolean,
+	.token.number,
+	.token.constant,
+	.token.symbol,
+	.token.deleted,
+	.token.keyword {
+		color: inherit;
+	}
+
+	.token.selector,
+	.token.attr-name,
+	.token.string,
+	.token.char,
+	.token.builtin,
+	.token.url,
+	.token.inserted {
+		color: inherit;
+	}
+
+	.token.entity {
+		color: inherit;
+	}
+
+	.token.atrule,
+	.token.attr-value {
+		color: inherit;
+	}
+
+	.token.function {
+		color: inherit;
+	}
+
+	.token.regex,
+	.token.important,
+	.token.variable {
+		color: inherit;
+	}
+
+	.token.important,
+	.token.bold {
+		font-weight: bold;
+	}
+	.token.italic {
+		font-style: italic;
+	}
+
+	.token.entity {
+		cursor: help;
+	}
+
+	.line-highlight {
+		background: rgba(0, 0, 0, 0.06);
+		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08), inset 2px 0 0 black;
+	}
+
+	.line-highlight:after,
+	.line-highlight:before {
+		display: none;
+	}
+}
