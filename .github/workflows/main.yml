@@ -8,7 +8,7 @@ jobs:
     - name: 🚚 Get latest code
       uses: actions/checkout@v3
 
-    - name: Build
+    - name: 🎅 Build
       uses: actions/setup-node@v3
       run: npm run build
 
