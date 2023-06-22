@@ -8,20 +8,20 @@ jobs:
     - name: Get latest code
       uses: actions/checkout@v3
 
-    - name: ⚙ Setup Node
+    - name: Setup Node
       uses: actions/setup-node@v3
 
-    - name: Install
+    - name: Install packages
       shell: "bash"
       run: |
         npm install
 
-    - name: Build
+    - name: Run build
       shell: "bash"
       run: |
         npm run build
 
-    - name: 📂 Sync files
+    - name: Sync files to ftp serwer
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
         server: ${{ secrets.FTP_URL }}
