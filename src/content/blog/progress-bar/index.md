@@ -1,5 +1,5 @@
 ---
-title: 'Pasek postępu wczytywania grafik'
+title: 'Pasek postępu'
 pubDate: 2023-06-21
 tags: ["progress", "js"]
 ---
