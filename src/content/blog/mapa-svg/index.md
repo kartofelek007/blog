@@ -112,7 +112,7 @@ map['swietokrzyskie'] = path;
 
 Jedną ze wcześniejszych operacji było usunięcie przez nas domyślnych atrybutów wyglądu każdego z patha. Aby nasza mapa miała jakikolwiek wygląd, musimy te atrybuty im nadać. Robimy to w prostej pętli:
 
-<pre data-line="12-25"><code class="language-js">
+<pre   data-line="12-25"><code class="language-js">
 var svg = Snap('#svg');
 svg.attr({ viewBox: "0 0 565 533" });
 
@@ -234,7 +234,7 @@ Snap.plugin(function (Snap, Element, Paper, glob) {
 
 oraz do zdarzeń mouoseover i mouseout dodajemy obsługę tych funkcji:
 
-<pre data-line="15,29"><code class="language-js">
+<pre   data-line="15,29"><code class="language-js">
 for (var key in map) {
 ...
 
@@ -276,7 +276,7 @@ Może to się przydać np do oznaczania elementu, dla którego wyświetlamy jaki
 Rozwiązań jest kilka. Jednym z nich jest podstawianie aktywnego elementu pod zmienną oraz zmienianie jego atrybutów.
 Po takim oznaczeniu elementu w zdarzeniach mouseover, mouseout sprawdzimy czy mamy do czynienia z aktywnym elementem (czy jest to element ze zmiennej). Jeżeli nie, tak jak wcześniej zmieniamy wygląd wskazywanego elementu. Jeżeli jednak jest to element aktywny, nie ruszamy jego stanu.
 
-<pre data-line="1,8,23-25,48,69"><code class="language-js">
+<pre   data-line="1,8,23-25,48,69"><code class="language-js">
 var activeElement = null;
 
 for (var key in map) {

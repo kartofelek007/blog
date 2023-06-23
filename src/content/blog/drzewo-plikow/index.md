@@ -12,7 +12,7 @@ Poniżej zajmiemy się wyświetleniem listy UL zawierającą katalogi i pliki. J
 
 Do pobrania struktury katalogów wykorzystamy <a href="http://www.php.net/manual/en/class.directoryiterator.php">DirectoryIterator</a>, a dokładniej przepis ze strony: <a href="http://stackoverflow.com/questions/952263/deep-recursive-array-of-directory-structure-in-php">http://stackoverflow.com/questions/952263/deep-recursive-array-of-directory-structure-in-php</a>.
 
-<pre><code class="language-php">
+<pre  class="line-numbers"><code class="language-php">
 $fileData = fillArrayWithFileNodes( new DirectoryIterator( '.' ) );
 
 function fillArrayWithFileNodes( DirectoryIterator $dir )
@@ -37,7 +37,7 @@ Kod w powyższej postaci nie będzie dla nas zbytnio użyteczny, bo daje nam za 
 
 Tablicę plików, które przeczytamy w PHP musimy potem wyświetlić za pomocą js. Aby łatwiej nam się potem pracowało potrzeba nam dodatkowych informacji takich jak typ, adres do pliku oraz nazwa pliku. Dodatkowo przyda nam się tablica <strong>$ignore</strong>, która zawiera nazwy katalogów i plików które trzeba pominąć.
 
-<pre><code class="language-php">
+<pre  class="line-numbers"><code class="language-php">
 &lt;?php
 $ignore = Array('pornoFolder'); //tego nie chcemy wyświetlać :)
 
@@ -97,7 +97,7 @@ Pozostaje nam wyświetlić naszą tablicę na stronie za pomocą JS. W poniższy
 
 Aby to zrobić musimy ją przekazać do js - najlepiej w formie <strong>json</strong>, a następnie wykonując po niej rekurencyjną pętlę stworzyć listę UL:
 
-<pre><code class="language-js">
+<pre  class="line-numbers"><code class="language-js">
 var arrayToUL = function(obj, className, id) {
     var $ul = $('&lt;ul class="'+className+'" '+ ((id!=undefined)?'id="'+id+'"':'') +'>&lt;/ul>');
     jQuery.each(obj, function(i, val) {
@@ -126,7 +126,7 @@ Funkcja <strong>arrayToUL()</strong>. Aby móc stylować powyższą listę tworz
 
 Pozostaje nam ostylowanie naszej listy:
 
-<pre><code class="language-css">
+<pre  class="line-numbers"><code class="language-css">
 .folder-tree, .folder-tree ul {
     padding:0;
     margin:0;
@@ -198,13 +198,13 @@ Pozostaje nam ostylowanie naszej listy:
 
 Możemy też dodać domyślne zwinięcie podkatalogów, i rozwijanie ich po kliknięciu na nie:
 
-<pre><code class="language-css">
+<pre  class="line-numbers"><code class="language-css">
 .folder-tree .subfolder {
     display:none;
 }
 </code></pre>
 
-<pre><code class="language-html">
+<pre  class="line-numbers"><code class="language-html">
 &lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">&lt;/script>
 &lt;script>
 $(function(){

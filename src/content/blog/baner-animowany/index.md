@@ -53,7 +53,7 @@ Mała opcja *Add .gitignore* utworzy nam automatycznie plik .gitignore. Plik ten
 Drugim katalogiem który głównie nas interesuje to *node_modules*. W katalogu tym znajdzie się zaraz ok 10000 plików, których nie powinniśmy kommitować.
 W naszym przypadku w tym pliku musi się znaleźć minimum jedna linia:
 
-<pre><code>
+<pre  class="line-numbers"><code>
 node_modules
 </code></pre>
 
@@ -66,7 +66,7 @@ Klikam na "Create repository". Utworzyło nam repozytorium z 2 plikami.
 
 Teraz je klonujemy, i zaczynamy pracę właściwą. Pobieram więc adres do klonowania poprzez prawy zielony przycisk na stronie i w konsoli na komputerze wpisuję
 
-<pre><code>
+<pre  class="line-numbers"><code>
 git clone https://github.com/kartofelek007/banner-wakacje.git
 </code></pre>
 
@@ -79,7 +79,7 @@ W naszym mini projekcie będziemy używać SCSS, który będziemy kompilować za
 Ja skorzystam tutaj z mini templatki do gulpa, która służy tylko do kompilowania sass. Pisałem na te tematy we wpisie o <a href="http://domanart.pl/gulp">Gulpie</a>.
 Do katalogu głównego projektu dodajemy więc 3 pliki <a href="http://domanart.pl/dema/banner-wakacje/package.json">package.json</a>, <a href="http://domanart.pl/dema/banner-wakacje/">package-lock.json</a> oraz <a href="http://domanart.pl/dema/banner-wakacje/gulpfile.js">gulpfile.js</a>, a następnie w konsoli instalujemy wszystkie składniki poleceniem
 
-<pre><code>
+<pre  class="line-numbers"><code>
 npm i
 //lub na macach i linuksach
 sudo npm i
@@ -97,7 +97,7 @@ Nasza struktura projektu powinna teraz wyglądać tak:
 
 Całość dodajemy do gita i wrzucamy do repozytorium:
 
-<pre><code>
+<pre  class="line-numbers"><code>
 git status
 git add .
 git status
@@ -118,18 +118,18 @@ Lepisz, lepisz, od ogółu do szczegółu. Tak samo tutaj - zaczynamy pisać kod
 Środowisko przygotowane. Zaczynamy prace właściwą :)
 Odpalamy środowisko poleceniem w konsoli:
 
-<pre><code>gulp</code></pre>
+<pre  class="line-numbers"><code>gulp</code></pre>
 
 ## Ułożenie baneru
 W poniższych kodach będę dawał listingi parami: html + scss.
 Zaczynamy od wyśrodkowania w html ramki z banerem:
 
-<pre><code class="language-html">
+<pre  class="line-numbers"><code class="language-html">
 &lt;div class="banner">
 &lt;/div>
 </code></pre>
 
-<pre><code class="language-scss">
+<pre  class="line-numbers"><code class="language-scss">
 html, body {
     margin:0;
     height:100%;
@@ -170,7 +170,7 @@ Pierwsze na celownik trafiają droga i drzewa. Droga leży na dole baneru, ma pe
 Wystarczy ją więc ustawić pozycjonowaniem absolutnym na dole baneru, dać odpowiednie tło.
 Czekaj - nie przepisuj. Wpierw teoria.
 
-<pre><code class="language-scss">
+<pre  class="line-numbers"><code class="language-scss">
 .ground {
     position:absolute;
     bottom:0;
@@ -194,7 +194,7 @@ Sama animacja drogi jest bardzo prosta. Przesuwamy tło za pomocą
 
 Co do drzew. Moglibyśmy ustawić je na planszy w odpowiednich miejscach:
 
-<pre><code class="language-scss">
+<pre  class="line-numbers"><code class="language-scss">
 .tree1 {
     position:absolute;
     bottom:100px;
@@ -219,7 +219,7 @@ Trzeba by więc przed takim przeniesieniem ustawić na chwilę opacity 0, a pote
 
 Animacja w css teoretycznie mogła by więc wyglądać mniej więcej tak:
 
-<pre><code class="language-scss">
+<pre  class="line-numbers"><code class="language-scss">
 @keyframes animTree {
     0% { left:200px; }
     20% { left:-200px; opacity:1; }
@@ -237,7 +237,7 @@ A najgorsze z tego wszystkiego - my wciąż mówimy tylko o 1 drzewie, a przecie
 Rozwiązaniem tutaj jest zastosowanie innej techniki. Drzewa i drogę połączymy w jeden wspólny element za pomocą <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds">wieloelementowego tła</a>, które możemy definiować po przecinku.
 Dodamy więc drogę, oraz drzewa na wspólny element, a następnie będziemy przesuwać cały element.
 
-<pre><code class="language-scss">
+<pre  class="line-numbers"><code class="language-scss">
 .ground {
     background:
         url(../images/drzewo1.png) 200px 20px no-repeat,
@@ -262,7 +262,7 @@ Ale i tutaj możemy zastosować pewną sztuczkę - znaną twórcom gier. Wystarc
 
 Poniżej już poprawny kod - można przepisywać:
 
-<pre><code class="language-html">
+<pre  class="line-numbers"><code class="language-html">
 &lt;div class="banner"&gt;
     &lt;div class="ground"&gt;
         &lt;div&gt;&lt;/div&gt;
@@ -271,7 +271,7 @@ Poniżej już poprawny kod - można przepisywać:
 &lt;/div&gt;
 </code></pre>
 
-<pre><code class="language-scss">
+<pre  class="line-numbers"><code class="language-scss">
 .ground {
     position: absolute;
     bottom:0;
@@ -307,14 +307,14 @@ Git status, git commit i git push.
 ## Roślinki
 Kolejny element - roślinki na dole ekranu. Zwykły div w którym będziemy animować pozycję tła:
 
-<pre><code class="language-html">
+<pre  class="line-numbers"><code class="language-html">
 &lt;div class="banner"&gt;
     ...
     &lt;div class="plants"&gt;&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
 
-<pre><code class="language-scss">
+<pre  class="line-numbers"><code class="language-scss">
 .plants {
     background: url(../images/roslinki.png) repeat-x;
     position: absolute;
@@ -340,7 +340,7 @@ Git status, git commit i git push.
 ## Góry
 Jak widzisz na grafice, mamy 3 typy gór: daleko oddalone w tle wysokie szczyty, niższe na środku i niskie zielone najbliżej widza. Wszystkie to divy, w których będziemy - tak samo jak w przypadku roślinek przesuwać tylko pozycję tła - w odpowiedniej szybkości - by uzyskać efekt paralaxy.
 
-<pre><code class="language-html">
+<pre  class="line-numbers"><code class="language-html">
 &lt;div class="banner"&gt;
     &lt;div class="mountains-layer1"&gt;&lt;/div&gt;
     &lt;div class="mountains-layer2"&gt;&lt;/div&gt;
@@ -349,7 +349,7 @@ Jak widzisz na grafice, mamy 3 typy gór: daleko oddalone w tle wysokie szczyty,
 &lt;/div&gt;
 </code></pre>
 
-<pre><code class="language-scss">
+<pre  class="line-numbers"><code class="language-scss">
 /* gory zielone tuz nad ziemia */
 .mountains-layer1 {
     height:208px;
@@ -406,14 +406,14 @@ Git status...
 ## Słoneczko
 Słoneczko to zwykły zaokrąglony div z box-shadow:
 
-<pre><code class="language-html">
+<pre  class="line-numbers"><code class="language-html">
 &lt;div class="banner"&gt;
     ...
     &lt;div class="sun"&gt;&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
 
-<pre><code class="language-scss">
+<pre  class="line-numbers"><code class="language-scss">
 .sun {
     width:300px;
     height: 300px;
@@ -432,7 +432,7 @@ Słoneczko to zwykły zaokrąglony div z box-shadow:
 ## Chmury
 Przy chmurach zastosujemy tą samą technikę co w przypadku drogi i drzew, czyli podzielimy ten element na dwie takie same plansze. Dla lepszego efektu dodamy dwa zestawy chmur:
 
-<pre><code class="language-html">
+<pre  class="line-numbers"><code class="language-html">
 &lt;div class="banner"&gt;
     ...
     &lt;div class="clouds1"&gt;
@@ -446,7 +446,7 @@ Przy chmurach zastosujemy tą samą technikę co w przypadku drogi i drzew, czyl
 &lt;/div&gt;
 </code></pre>
 
-<pre><code class="language-scss">
+<pre  class="line-numbers"><code class="language-scss">
 /* chmóry zestaw 1 */
 .clouds1 {
     width:200%;
@@ -501,7 +501,7 @@ Git...
 Ah dochodzimy do najważniejszej części naszego banera.
 Cały samochód składa się z 2 kół i nadwozia, które upakujemy we wspólny kontener. Dzięki temu będziemy mogli poruszać całym samochodem, ale też nadwoziem i kołami z osobna.
 
-<pre><code class="language-html">
+<pre  class="line-numbers"><code class="language-html">
 &lt;div class="car"&gt;
     &lt;div class="car-body"&gt;&lt;/div&gt;
     &lt;div class="car-wheel car-wheel-left"&gt;&lt;/div&gt;
@@ -509,7 +509,7 @@ Cały samochód składa się z 2 kół i nadwozia, które upakujemy we wspólny 
 &lt;/div&gt;
 </code></pre>
 
-<pre><code class="language-scss">
+<pre  class="line-numbers"><code class="language-scss">
 .car {
     width:348px;
     height:197px;
@@ -544,7 +544,7 @@ Cały samochód składa się z 2 kół i nadwozia, które upakujemy we wspólny 
 Cały samochód lekko obracam na boki. Nadwozie subtelnie poruszam w pionie.
 Koła samochodu to osobne części, dzięki temu bez problemu możemy je animować:
 
-<pre><code class="language-scss">
+<pre  class="line-numbers"><code class="language-scss">
 .car-wheel {
     width:76px;
     height:77px;
@@ -580,7 +580,7 @@ Kolejny krok za nami. Wiesz co masz zrobić :)
 ## Tekst
 Przyszedł czas na animowany tekst na banerze.
 
-<pre><code class="language-html">
+<pre  class="line-numbers"><code class="language-html">
 &lt;div class="banner"&gt;
     &lt;div class="text"&gt;
         &lt;h2&gt;A po egzaminie&lt;/h2&gt;
@@ -589,7 +589,7 @@ Przyszedł czas na animowany tekst na banerze.
 &lt;/div&gt;
 </code></pre>
 
-<pre><code class="language-scss">
+<pre  class="line-numbers"><code class="language-scss">
 .text {
     position: absolute;
     left:0;
@@ -622,7 +622,7 @@ Przyszedł czas na animowany tekst na banerze.
 
 Jak widzisz jako czcionkę wybrałem <a href="https://fonts.google.com/specimen/Bangers">Bangers</a>. Aby jej użyć wrzuć do nagłowka strony link
 
-<pre><code>
+<pre  class="line-numbers"><code>
 &lt;link href="https://fonts.googleapis.com/css?family=Bangers&amp;subset=latin-ext" rel="stylesheet">
 </code></pre>
 
@@ -634,7 +634,7 @@ Możemy zmienić jego pozycję, możemy pobawić się opacity, skalą itp.
 Spróbujmy jednak wyjść poza to.
 Zacznijmy od objęcia każdej litery spanem. Możemy do tego użyć JS - na przykład:
 
-<pre><code class="language-js">
+<pre  class="line-numbers"><code class="language-js">
 function changeLettersToSpans(text) {
     return text.split('').map(letter => {
         if (letter == ' ') {
@@ -655,7 +655,7 @@ h3.innerHTML = changeLettersToSpans(h3.innerText);
 
 Ja to jednak zrobiłem ręcznie. Liter nie ma aż tyle, a dzięki ręcznej robocie pozbyłem się się JS z naszego banera:
 
-<pre><code class="language-html">
+<pre  class="line-numbers"><code class="language-html">
 &lt;div class="banner"&gt;
     &lt;div class="text"&gt;
         &lt;h2&gt;
@@ -672,7 +672,7 @@ Kto co woli.
 
 Dzięki temu, że każda litera jest teraz oddzielnym elementem, możemy ją indywidualnie animować. Wykorzystajmy do tego pętlę w Sassie:
 
-<pre><code class="language-scss">
+<pre  class="line-numbers"><code class="language-scss">
 .text {
     ...
 
@@ -693,7 +693,7 @@ Dzięki temu, że każda litera jest teraz oddzielnym elementem, możemy ją ind
 W pętli wyliczyliśmy sobie opóźnienie dla animacji każdej z liter. Pierwsza animacja
 to wjazd liter na baner, druga to powiewanie na wietrze, a ostatnia to wyjazd liter.
 
-<pre><code class="language-scss">
+<pre  class="line-numbers"><code class="language-scss">
 @keyframes animLetterIn {
     0% {
         opacity:0;

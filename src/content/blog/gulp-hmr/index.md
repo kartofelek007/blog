@@ -29,7 +29,7 @@ npm i webpack-dev-middleware webpack-hot-middleware -D
 
 Następnie dodajmy je do naszej poprzedniej konfiguracji:
 
-<pre data-line="12-15"><code class="language-js">
+<pre   data-line="12-15"><code class="language-js">
 const gulp                  = require("gulp");
 const sass                  = require("gulp-sass");
 const sourcemaps            = require("gulp-sourcemaps");
@@ -122,7 +122,7 @@ exports.html = html;
 Nasza praca będzie przebiegać w 2 trybach. Jeden będzie przebudowywał pliki javascript, ale i odświeżał stronę. Drugi będzie używał HMR, ale będzie nadawał się tylko do prac developerskich.
 Dodajmy do konfiguracji odpowiednią flagę i zadanie, które będzie ją zmieniać:
 
-<pre data-line="18,85-88,92"><code class="language-js">
+<pre   data-line="18,85-88,92"><code class="language-js">
 const gulp                  = require("gulp");
 const sass                  = require("gulp-sass");
 const sourcemaps            = require("gulp-sourcemaps");
@@ -252,7 +252,7 @@ const server = function (cb) {
 
 Ostatnią rzeczą będzie przerobienie konfiguracji samego webpacka. Najłatwiej było by stworzyć oddzielną konfigurację w drugim pliku. W takim przypadku trzeba by się do niej odwołać w naszej konfiguracji w linii:
 
-<pre data-line="14"><code class="language-js">
+<pre   data-line="14"><code class="language-js">
 const gulp                  = require("gulp");
 const sass                  = require("gulp-sass");
 const sourcemaps            = require("gulp-sourcemaps");
@@ -376,7 +376,7 @@ module.exports = (dev) => {
 
 W naszej konfiguracji Gulpa musimy zmienić odwołania do takiego pliku, ponieważ to już nie tylko obiekt konfiguracji, a funkcja zwracająca obiekt:
 
-<pre data-line="14, 59"><code class="language-js">
+<pre   data-line="14, 59"><code class="language-js">
 const gulp                  = require("gulp");
 const sass                  = require("gulp-sass");
 const sourcemaps            = require("gulp-sourcemaps");

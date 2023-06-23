@@ -287,7 +287,7 @@ function lightenDarkenColor(col, amt) {
 }
 </code></pre>
 
-<pre data-line="5"><code class="language-js">
+<pre   data-line="5"><code class="language-js">
 const paths = document.querySelectorAll('#map .map-shops *[data-id^=shop]');
 
 for (const path of paths) {
@@ -398,7 +398,7 @@ Zacznijmy od najłatwiejszej rzeczy czyli prostego stylowania dla takiego toolti
 
 Stwórzmy teraz za pomocą JS nasz tooltip:
 
-<pre data-line="1-5"><code class="language-js">
+<pre   data-line="1-5"><code class="language-js">
 //tworzy tooltip
 const tooltip = document.createElement("div");
 tooltip.classList.add("tooltip-map");
@@ -417,7 +417,7 @@ Domyślnie tooltip będzie niewidoczny, dlatego dostał display none. Po najecha
 
 Do ustawiania w pozycji kursora skorzystamy z <code>e.pageX</code> i <code>e.pageY</code>. Po dojechaniu do krawędzi ekranu trzeba te pozycje skorygować by tooltip nie wychodził poza ekran. Napiszmy więc funkcję, która to wszystko zrobi:
 
-<pre data-line="1-11,19"><code class="language-js">
+<pre   data-line="1-11,19"><code class="language-js">
 function setTooltipPos(x, y) {
     tooltip.style.left = x + 20 + "px";
     tooltip.style.top = y + 20 + "px";
@@ -445,7 +445,7 @@ for (const path of paths) {
 
 Podczas poruszania się kursorem po sklepie będziemy aktualizować pozycję tooltipa, a po zjechaniu kursorem, tooltip ukryjemy:
 
-<pre data-line="11,16-17"><code class="language-js">
+<pre   data-line="11,16-17"><code class="language-js">
 ...
 for (const path of paths) {
     ...
@@ -532,7 +532,7 @@ function generateTooltipContent(provinceName) {
 
 i użyjmy przy najechaniu na sklep:
 
-<pre data-line="7-17"><code class="language-js">
+<pre   data-line="7-17"><code class="language-js">
 for (const path of paths) {
     ...
 
@@ -566,7 +566,7 @@ Ostatnio dla jednego klienta robiłem mapę Polski. Zrobiłem w niej ogólną ta
 W naszym przykładzie możemy zastosować mniej więcej podobne podejście. Stwórzmy tablicę z numerami nieaktywnych sklepów.
 Wystarczy potem zrobić po nich pętlę, wyłapać odpowiednie elementy w svg, dodać im jakieś stylowanie a potem w powyższej pętli for uwzględnić te wyłączone sklepy:
 
-<pre data-line="1,3-7,11-13"><code class="language-js">
+<pre   data-line="1,3-7,11-13"><code class="language-js">
 const disabledShopID = [21,20,19,18,16,17];
 
 //wyłapuje sklepy o danych ID i ustawiam im stylowanie wyłączone

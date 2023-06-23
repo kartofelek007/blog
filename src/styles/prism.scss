@@ -1,25 +1,45 @@
 /* http://prismjs.com/download.html?themes=prism-okaidia&languages=markup+css+clike+javascript+actionscript+apacheconf+coffeescript+handlebars+http+php+sass+scss&plugins=line-highlight+line-numbers */
 /**
-* okaidia theme for JavaScript, CSS and HTML
-* Loosely based on Monokai textmate theme by http://www.monokai.nl/
-* @author ocodia
-*/
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
 code[class*="language-"],
 pre[class*="language-"] {
+	text-shadow: none;
 	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
 	word-break: normal;
 	word-wrap: normal;
-	line-height: 1.5em;
+	//font-size: 1rem;
+	//line-height: 1.5rem;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
 	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
 	hyphens: none;
 }
 
+/* Code blocks */
 pre[class*="language-"] {
+	padding: 1rem;
 	margin: 0;
-	overflow: auto;
+	overflow-x: auto;
+	border-radius: 0.3rem;
+}
+
+/* Inline code */
+:not(pre)>code[class*="language-"] {
+	padding: .1rem;
+	border-radius: .3rem;
+	white-space: normal;
 }
 
 pre[data-line] {
@@ -31,9 +51,12 @@ pre[data-line] {
 	position: absolute;
 	left: 0;
 	right: 0;
-	padding: 0;
-	margin-top: 1em; /* Same as .prism’s padding-top */
+	padding: inherit 0;
+	margin-top: 1em;
+	/* Same as .prism’s padding-top */
+	background: hsla(24, 20%, 50%, .08);
 	pointer-events: none;
+
 	line-height: inherit;
 	white-space: pre;
 }
@@ -53,7 +76,6 @@ pre[data-line] {
 	vertical-align: .3em;
 	border-radius: 999px;
 	text-shadow: none;
-	box-shadow: 0 1px white;
 }
 
 .line-highlight[data-end]:after {
@@ -68,7 +90,7 @@ pre.line-numbers {
 	counter-reset: linenumber;
 }
 
-pre.line-numbers > code {
+pre.line-numbers>code {
 	position: relative;
 }
 
@@ -78,22 +100,25 @@ pre.line-numbers > code {
 	top: 0;
 	font-size: 100%;
 	left: -3.8em;
-	width: 3em; /* works for line-numbers below 1000 lines */
+	width: 3em;
 	letter-spacing: -1px;
-	border-right: 1px solid #999;
+	font-weight: normal;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
 	user-select: none;
 
 }
 
-.line-numbers-rows > span {
+.line-numbers-rows>span {
 	pointer-events: none;
 	display: block;
 	counter-increment: linenumber;
 }
 
-.line-numbers-rows > span:before {
+.line-numbers-rows>span:before {
 	content: counter(linenumber);
-	color: #999;
+	color: rgba(0,0,0,0.15);
 	display: block;
 	padding-right: 0.8em;
 	text-align: right;

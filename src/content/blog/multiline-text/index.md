@@ -12,13 +12,13 @@ Pojawił się w nim dość często spotykany motyw z tekstem, który jest pisany
 Na rozwiązanie takiego wyzwania wymyśliłem kilka sposobów - żaden idealny, ot po prostu inne.
 Kilka z nich przedstawionych zostało na stronie https://css-tricks.com/multi-line-padded-text/. Większość opiera się o podobną technikę polegającą na wrzuceniu tekstu w dodatkowy element inline, który następnie stylujemy.
 
-<pre><code class="language-html">
+<pre  class="line-numbers"><code class="language-html">
 &lt;h2 class="title">
     &lt;span>Lorem ipsum dolor sit.&lt;/span>
 &lt;/h2>
 </code></pre>
 
-<pre><code class="language-css">
+<pre  class="line-numbers"><code class="language-css">
 .title {
     font-size: 20px;
     line-height: 35px;

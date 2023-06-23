@@ -208,7 +208,7 @@ Dostajemy coś takiego: <a href="http://domanart.pl/dema/table-resize/table-resi
 
 Element <code>.thead</code> chcemy przykleić do górnej krawędzi przewijanego elementu <code>.table-wrap</code>. Pozycjonowania <code>fixed</code> nie możemy tutaj użyć, bo ono działa względem całej strony (0,0 to lewy górny róg ekranu). W przyszłości będziemy mogli użyć pozycjonowania <a href="http://updates.html5rocks.com/2012/08/Stick-your-landings-position-sticky-lands-in-WebKit">sticky</a>, ale póki co będziemy musieli wykorzystać pozycjonowanie absolutne i za pomocą skryptu aktualizować pozycję tego elementu.
 
-<pre data-line="24-29"><code class="language-js">
+<pre   data-line="24-29"><code class="language-js">
 $(function() {
     $('table').each(function() {
         var $table = $(this);
@@ -247,7 +247,7 @@ Mamy w rezultacie tabelę ze sztywnym nagłówkiem: <a href="http://domanart.pl/
 ## Dołączamy rozszerzanie kolumn
 Dorzucamy do naszej strony jquery ui i odpalamy rozszerzanie dla kolumn:
 
-<pre data-line="1-2,37-47"><code class="language-html">
+<pre   data-line="1-2,37-47"><code class="language-html">
 &lt;link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
 &lt;script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js">&lt;/script>
 
@@ -336,7 +336,7 @@ Poprawioną wersję z rozszerzaniem przypisanym do divów znajdziesz tutaj: <a h
 
 Przy zmienie szerokości kolumn nagłówka, szerokość kolumn tabeli <code>.tbody</code> się nie zmienia. Aby to naprawić, wystarczy podczas zdarzenia resize które właśnie podpieliśmy robić pętlę po wszystkich TH i pobieraną od nich szerokość przepisywać do komórek TD z pierwszego rzędu tbody:
 
-<pre data-line="14-16"><code class="language-js">
+<pre   data-line="14-16"><code class="language-js">
 $(function() {
     $('table').each(function() {
         ...
@@ -371,7 +371,7 @@ Drugi problem jest taki, że teraz nie jesteśmy dowolnie zmieniać rozmiarów k
 
 Poprawiamy więc dalej:
 
-<pre data-line="28-32"><code class="language-js">
+<pre   data-line="28-32"><code class="language-js">
 $(function() {
     $('table').each(function() {
         var $table = $(this);
@@ -435,7 +435,7 @@ W niektórych przeglądarkach (poza FF) występuje jakaś desynchronizacja. Szcz
 
 Jak się okazuje, podczas zmiany rozmiaru kolumn kod:
 
-<pre data-line="3"><code class="language-js">
+<pre   data-line="3"><code class="language-js">
 resize: function (event, ui) {
     event.stopPropagation();
     ui.element.parent().width($(this).width())
@@ -447,7 +447,7 @@ resize: function (event, ui) {
 
 pobiera złe wymiary dla komórek. Wystarczy zastąpić go wersją z czystego JS:
 
-<pre data-line="3"><code class="language-js">
+<pre   data-line="3"><code class="language-js">
 resize: function (event, ui) {
     event.stopPropagation();
     ui.element.parent().width($(this).get(0).style.width)
@@ -463,7 +463,7 @@ Swoją drogą <a href="http://domanart.pl/dema/table-resize/table-resize-step5b.
 Gdy teraz spojrzysz na naszą tabelę, zauważysz, że kolejne rzędy TR nie mają obramowania oddzielającego. Najłatwiej je uzyskać dodając dla TD border-bottom. W naszym przypadku nie będzie to jedna super pięknie wyglądać. W tej chwili belka nagłówka tabeli nawet przy bardzo ściśniętych kolumnach zawsze zajmuje całą szerokość. Gdy kolumny z border bottom zostaną zmniejszone, wtedy linie oddzielające nie będą zajmowały całej szerokości. Sprawdź to sam - <a href="http://domanart.pl/dema/table-resize/table-resize-step6.html">Krok 6</a>. Jeżeli takie działanie ci odpowiada, to pomiń kolejny krok. Jeżeli nie, zapraszam do lektury.
 Można to naprawić dodając fejkowe linie, które będą oddzielały kolejne rzędy:
 
-<pre data-line="49-57"><code class="language-js">
+<pre   data-line="49-57"><code class="language-js">
 $(function() {
     $('table').each(function() {
         var $table = $(this);

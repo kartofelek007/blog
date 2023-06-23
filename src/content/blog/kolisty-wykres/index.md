@@ -23,7 +23,7 @@ To najprostsza z omawianych tutaj metod, mająca bardzo duże możliwości.
 
 Idea jest prosta. Rysuję conic, w którym załączam dwa kolory. Jeden kolor kończy się równo w momencie, gdzie zaczyna się drugi.
 
-<pre><code class="language-css">
+<pre  class="line-numbers"><code class="language-css">
 .element {
     width: 150px;
     height: 150px;

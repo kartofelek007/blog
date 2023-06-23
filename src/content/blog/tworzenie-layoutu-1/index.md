@@ -80,7 +80,7 @@ Te trzy pierwsze linijki - w dzisiejszych czasach niezbędne - występują też 
 
 Layout ma jeden główny kolor - "zielonkawo-morski" (yhy - raczej cyjan). Będziemy go wiele razy używać, więc stwórzmy z niego zmienną:
 
-<pre data-line="3"><code class="language-scss">
+<pre   data-line="3"><code class="language-scss">
 //src/scss/style.scss
 
 $color-main: #00FFE4;
@@ -185,7 +185,7 @@ Po wybraniu opcji wracamy do zakładki embed i widzimy 2 przygotowane dla nas ko
 Jeden to znacznik link który wstawimy do nagłówka strony. Drugi to już <strong>font-family</strong> jakiego mamy użyć w css. W okienku, które przed chwilą nam wyskoczyło w zakładce Embed istnieje jeszcze jedna metoda dołączenia definicji fontów - za pomocą @import w css. Metoda z linkiem w head <a href="https://stackoverflow.com/questions/12316501/including-google-web-fonts-link-or-import">działa lepiej</a> więc pozostańmy przy niej.
 Ok. Dodajmy ten kod do html (przed nasze style) i użyjmy ten krój dla body:
 
-<pre data-line="11"><code class="language-html">
+<pre   data-line="11"><code class="language-html">
 &lt;!-- dist/index.html -->
 &lt;!doctype html>
 &lt;html class="no-js" lang="en">
@@ -207,7 +207,7 @@ Ok. Dodajmy ten kod do html (przed nasze style) i użyjmy ten krój dla body:
 &lt;/html>
 </code></pre>
 
-<pre data-line="15"><code class="language-scss">
+<pre   data-line="15"><code class="language-scss">
 //src/scss/_layout.scss
 
 *, *:before, *:after {
@@ -329,7 +329,7 @@ Trzecia - ta, którą wybierzemy to nałożenie na <strong>.main-banner</strong>
 
 Zachowują się one jak warstwy w Photoshopie - jeżeli tło jest wyżej w kodzie, wtedy jest nakładane na inne tła. Na nasz baner nałożymy grafikę tła (tą co powyżej), a na nią kolejny obrazek - linear-gradient. Nie możemy tutaj użyć zwykłego koloru, bo kolor to nie image.
 
-<pre data-line="5,11"><code class="language-scss">
+<pre   data-line="5,11"><code class="language-scss">
 //src/scss/components/_main-hero.scss
 
 .main-banner {
@@ -365,7 +365,7 @@ Powyższy kod moglibyśmy też zapisać za pomocą tak zwanych <strong>short-han
 
 Ewentualnie możemy dodać do tego lekkie przyciemnienie po bokach - taka mini winietka, którą też uzyskamy za pomocą gradientu:
 
-<pre data-line="12-17"><code class="language-scss">
+<pre   data-line="12-17"><code class="language-scss">
 //src/scss/components/_main-hero.scss
 
 .main-banner {
@@ -472,7 +472,7 @@ Na nagłówku strony znajduje się logo <strong>.page-logo</strong> i główna n
 
 Pobawmy się trochę. Na layoucie jest zaznaczony link po najechaniu. Ma on na dole podkreślenie. Jeżeli damy tutaj zwykłe text-decoration:underline czy border-bottom, to nikogo nie zachwycimy. Użyjmy tutaj pseudoelementu i jakiejś animacji. Kreska będzie więc wypozycjonowana absolutnie do dolnej krawędzi linka, a jej pozycje left i right będą ustawione na 50% (czyli kreska nie będzie miała szerokości). Po najechaniu wystarczy zanimować te pozycje:
 
-<pre data-line="7,13-15,25-26"><code class="language-scss">
+<pre   data-line="7,13-15,25-26"><code class="language-scss">
 .page-nav-list a {
     text-transform: uppercase;
     font-weight: 700;
@@ -512,7 +512,7 @@ Raczej nie używam go do budowania nazw klas. Może to kwestia przyzwyczajenia, 
 Nagłówek strony jest przyklejony do góry strony (fixed), więc tak naprawdę nie wpływa na resztę strony (w tym banner). Nasz baner podzielimy za pomocą grida na odpowiednie miejsca. Na górze zostanie miejsce puste które normalnie zajął by nagłówek, potem miejsce na środek banera (tytuł, tekst i link), a na dole miejsce na ikonę przewijania i tą dziwnie wyciętą dziurę na dole banera.
 Spokojnie można by tutaj też zastosować inne techniki. Dla przykładu wycentrować główną treść banera flexem, a ikonę przewijania i stopkę z dziurą dać na dół pozycjonowaniem absolutnym względem .main-banner.
 
-<pre data-line="24-32"><code class="language-scss">
+<pre   data-line="24-32"><code class="language-scss">
 //src/scss/components/_main-banner.scss
 
 .main-banner {
@@ -842,7 +842,7 @@ Taką teksturę stworzymy za pomocą nałożonej na ten tekst grafiki, którą p
 Wstawiamy do svg element image:
 
 
-<pre data-line="15"><code class="language-html">
+<pre   data-line="15"><code class="language-html">
 &lt;svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 680.5 263.8" style="enable-background:new 0 0 680.5 263.8;" xml:space="preserve">
     &lt;path class="main-banner-letter-type-1 main-banner-letter-2" d="M328.6,87.4c0,14.1-0.3,24.1-1,29.9c-0.7,5.9-2.7,11.2-6.2,16.1c-3.5,4.9-8.2,8.6-14.2,11.2 c-6,2.6-12.9,3.9-20.8,3.9c-7.5,0-14.3-1.2-20.2-3.7c-6-2.5-10.8-6.1-14.4-11.1c-3.6-4.9-5.8-10.3-6.5-16c-0.7-5.8-1-15.9-1-30.3 v-24c0-14.1,0.3-24.1,1-29.9c0.7-5.9,2.7-11.2,6.2-16.1c3.5-4.9,8.2-8.6,14.2-11.2c6-2.6,12.9-3.9,20.8-3.9c7.5,0,14.3,1.2,20.2,3.7 c6,2.5,10.8,6.1,14.4,11.1c3.6,4.9,5.8,10.3,6.5,16c0.7,5.8,1,15.9,1,30.3V87.4z M292.1,41.3c0-6.5-0.4-10.7-1.1-12.5 c-0.7-1.8-2.2-2.7-4.5-2.7c-1.9,0-3.4,0.7-4.4,2.2c-1,1.5-1.5,5.8-1.5,13v65.5c0,8.1,0.3,13.2,1,15.1c0.7,1.9,2.2,2.9,4.6,2.9 c2.5,0,4.1-1.1,4.8-3.3c0.7-2.2,1-7.4,1-15.7V41.3z"/>
     &lt;path class="main-banner-letter-type-1 main-banner-letter-4" d="M435.1,5.3h60.8v28.1h-24.4v26.6h22.8v26.7h-22.8v30.9h26.8v28.1h-63.3V5.3z"/>
@@ -866,7 +866,7 @@ Gdy wstawiłem taką grafikę do tego svg, nie przykrywała ona całych swoich w
 
 Ok grafikę dodaliśmy. Teraz trzeba ją przyciąć za pomocą jakiś kształtów. Działa to podobnie jak cliping path w Photoshopie. Czyli jeżeli dla maski użyjemy jakiegoś kształtu, to na jego obszarze będzie widoczna przycinana grafika. Dla takiej maski my wykorzystamy kod samych liter:
 
-<pre data-line="15-30"><code class="language-html">
+<pre   data-line="15-30"><code class="language-html">
 &lt;svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 680.5 263.8" style="enable-background:new 0 0 680.5 263.8;" xml:space="preserve">
     &lt;path class="main-banner-letter-type-1 main-banner-letter-2" d="M328.6,87.4c0,14.1-0.3,24.1-1,29.9c-0.7,5.9-2.7,11.2-6.2,16.1c-3.5,4.9-8.2,8.6-14.2,11.2 c-6,2.6-12.9,3.9-20.8,3.9c-7.5,0-14.3-1.2-20.2-3.7c-6-2.5-10.8-6.1-14.4-11.1c-3.6-4.9-5.8-10.3-6.5-16c-0.7-5.8-1-15.9-1-30.3 v-24c0-14.1,0.3-24.1,1-29.9c0.7-5.9,2.7-11.2,6.2-16.1c3.5-4.9,8.2-8.6,14.2-11.2c6-2.6,12.9-3.9,20.8-3.9c7.5,0,14.3,1.2,20.2,3.7 c6,2.5,10.8,6.1,14.4,11.1c3.6,4.9,5.8,10.3,6.5,16c0.7,5.8,1,15.9,1,30.3V87.4z M292.1,41.3c0-6.5-0.4-10.7-1.1-12.5 c-0.7-1.8-2.2-2.7-4.5-2.7c-1.9,0-3.4,0.7-4.4,2.2c-1,1.5-1.5,5.8-1.5,13v65.5c0,8.1,0.3,13.2,1,15.1c0.7,1.9,2.2,2.9,4.6,2.9 c2.5,0,4.1-1.1,4.8-3.3c0.7-2.2,1-7.4,1-15.7V41.3z"/>
     &lt;path class="main-banner-letter-type-1 main-banner-letter-4" d="M435.1,5.3h60.8v28.1h-24.4v26.6h22.8v26.7h-22.8v30.9h26.8v28.1h-63.3V5.3z"/>
@@ -918,7 +918,7 @@ Ostatnią rzeczą jaka nam została to ustawienie dla image danej maski. Robimy 
 
 Wynik możesz zobaczyć pod poniższym linkiem. Dla jeszcze większego uatrakcyjnienia zmniejszyłem leciutko ich opacity.
 
-<pre data-line="8,14"><code class="language-scss">
+<pre   data-line="8,14"><code class="language-scss">
 //src/scss/components/_main-banner.scss
 
 ...
@@ -943,7 +943,7 @@ Zobacz poniższy wynik. Zakomentowałem tam dla 2 powyższych elementów dodatko
 Ostatnią (naprawdę!) rzeczą jaką dodamy dla uatrakcyjnienia tego napisu to lekkie rozmycie zielo... ehm cyjanowych liter. Znowu - szybkie szukanie i mamy przepis na przykładowej stronie <a href="https://codepen.io/OpherV/pen/dRoQdN">https://codepen.io/OpherV/pen/dRoQdN</a>.
 Dodajemy więc do defs w elemencie svg definicję filtru rozmycia, a następnie dodajemy ją do liter typu 1:
 
-<pre data-line="32-40"><code class="language-html">
+<pre   data-line="32-40"><code class="language-html">
 &lt;!-- dist/index.html -->
 &lt;svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 680 265" style="enable-background:new 0 0 680 265;" xml:space="preserve">
     &lt;path class="main-banner-letter-type-1 main-banner-letter-2"  d="M330.9,90.2c0,13.4-0.3,22.9-0.9,28.4c-0.7,5.6-2.6,10.6-5.9,15.3c-3.3,4.7-7.8,8.2-13.5,10.6 c-5.7,2.5-12.3,3.7-19.8,3.7c-7.1,0-13.6-1.1-19.2-3.5c-5.7-2.4-10.3-5.8-13.7-10.5c-3.4-4.7-5.5-9.8-6.2-15.2 c-0.7-5.5-0.9-15.1-0.9-28.8V67.4c0-13.4,0.3-22.9,0.9-28.4c0.7-5.6,2.6-10.6,5.9-15.3c3.3-4.7,7.8-8.2,13.5-10.6s12.3-3.7,19.8-3.7 c7.1,0,13.6,1.1,19.2,3.5c5.7,2.4,10.3,5.8,13.7,10.5c3.4,4.7,5.5,9.8,6.2,15.2c0.7,5.5,0.9,15.1,0.9,28.8L330.9,90.2L330.9,90.2z  M296.2,46.4c0-6.2-0.4-10.2-1-11.9c-0.7-1.7-2.1-2.6-4.3-2.6c-1.8,0-3.2,0.7-4.2,2.1c-0.9,1.4-1.4,5.5-1.4,12.3v62.2 c0,7.7,0.3,12.5,0.9,14.3s2.1,2.8,4.4,2.8c2.4,0,3.9-1,4.6-3.1c0.7-2.1,0.9-7,0.9-14.9L296.2,46.4L296.2,46.4z"/>
@@ -1020,7 +1020,7 @@ Najłatwiej to osiągnąć poprzez dodanie do niego dodatkowej klasy. Podczas pr
 
 W pliku stylowania headera dodajemy dodatkowe style:
 
-<pre data-line="19-23,29-32"><code class="language-scss">
+<pre   data-line="19-23,29-32"><code class="language-scss">
 //src/scss/components/_page-header.scss
 .page-header {
     position: fixed;
@@ -1159,7 +1159,7 @@ Boczne paski mają nieokreśloną wielkość więc możemy założyć, że powin
 
 Do html na końcu <strong>.main-banner</strong> dodajemy dodatkowy element:
 
-<pre data-line="22-24"><code class="language-html">
+<pre   data-line="22-24"><code class="language-html">
 &lt;!-- dist/index.html -->
 
 &lt;header class="page-header">
@@ -1228,7 +1228,7 @@ Już w poprzednim tekście pokazywałem wam <a href="http://domanart.pl/mini-tre
 
 Wpierw dodajemy ją do naszego banera:
 
-<pre data-line="21-22"><code class="language-html">
+<pre   data-line="21-22"><code class="language-html">
 &lt;!-- dist/index.html -->
 &lt;section class="main-banner">
     &lt;div class="main-banner-content">

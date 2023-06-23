@@ -11,7 +11,7 @@ Wracamy do cięcia layoutu. Tym razem będzie o wiele prościej.
 Kolejne sekcje zaczynają się od tytułu, który jest identyczny dla wszystkich sekcji.
 Dla każdej sekcji poza klasą dodam id, dzięki czemu w przyszłości będę mógł do niej linkować.
 
-<pre data-line="3-8"><code class="language-html">
+<pre   data-line="3-8"><code class="language-html">
 &lt;section class="section section-love-music" id="love-music">
     &lt;div class="container">
         &lt;h2 class="section-title">
@@ -65,7 +65,7 @@ Od razu też stwórzmy stylowanie dla sekcji i nagłówka <strong>.section-heade
 
 W powyższym kodzie HTML dodaliśmy <strong>.container</strong>, który centruje nam treść w poziomie. Pozostaje wrzucić do niego trzy artykuły.
 
-<pre data-line="12-22"><code class="language-html">
+<pre   data-line="12-22"><code class="language-html">
 &lt;section class="section section-love-music" id="love-music">
     &lt;div class="container">
         &lt;header class="section-header">
@@ -223,7 +223,7 @@ oraz stylowanie dla niego w pliku <strong>components/_box.scss</strong>, który 
 ## Sekcja Our team
 Sekcja jest bardzo podobna do tej powyższej, dlatego wygląd html będzie tutaj praktycznie identyczny. Dochodzi jedynie dodatkowa klasa, dzięki której zmienimy nieco wygląd:
 
-<pre data-line="1"><code class="language-html">
+<pre   data-line="1"><code class="language-html">
 &lt;section class="section section-our-team" id="our-team">
     &lt;div class="container">
         &lt;h2 class="section-title">
@@ -296,7 +296,7 @@ Dodajmy stylowanie w pliku <strong>components/_our-team.scss</strong>:
 ## Sekcja main parallax
 Między sekcjami znajduje się dodatkowa sekcja z tłem. Jest nawet prostsza od powyższych.
 
-<pre data-line="5-13"><code class="language-html">
+<pre   data-line="5-13"><code class="language-html">
 &lt;section class="section section-love-music" id="love-music">
     ...
 &lt;section>
@@ -495,7 +495,7 @@ Między sekcjami znajduje się dodatkowa sekcja z tłem. Jest nawet prostsza od 
 
 Jeżeli chodzi o oskryptowanie tego formularza, to całość opisałem <a href="http://kursjs.pl/kurs/formularze/formularz-kontaktowy.php">w tym artykule</a>. Poniżej bezczelnie sobie zapożyczę kod z końcowego dema. Do ostatniej funkcji dodałem tylko export.
 
-<pre data-line="46"><code class="language-js">
+<pre   data-line="46"><code class="language-js">
 //src/js/_form.js
 
 function removeFieldError(field) {
@@ -633,7 +633,7 @@ export default function() {
 }
 </code></pre>
 
-<pre data-line="4, 8"><code class="language-js">
+<pre   data-line="4, 8"><code class="language-js">
 //src/js/_app.js
 
 import { pageHeaderSticky } from "./page-header";
@@ -725,7 +725,7 @@ Aby zdobyć klucz musimy podać dane odnośnie naszej karty płatniczej. Jakiś 
 
 Po wygenerowaniu klucza, do HTML dodajemy linijkę ze skryptem:
 
-<pre  class="line-numbers"><code class="language-html">
+<pre  ><code class="language-html">
 &lt;script async defer src="https://maps.googleapis.com/maps/api/js?key=TWOJ_KLUCZ&callback=initMap">&lt;/script>
 </code></pre>
 
@@ -753,7 +753,7 @@ export { mainMap }
 
 W powyższym linku do google map, który wrzuciliśmy do HTML wywoływana jest funkcja `initMap`. Jest to sposób na ominięcie zabezpieczeń <a href="https://kursjs.pl/kurs/ajax/ajax.php#cors">CORS</a>. Żeby mapa zadziałała, musimy naszą powyższą funkcję `mainMap` wystawić poza nasz budowany webpackiem skrypt. Możemy to zrobić ustawiając ją jako właściwość obiektu window:
 
-<pre data-line="7"><code class="language-js">
+<pre   data-line="7"><code class="language-js">
 //src/js/_app.js
 
 import { pageHeaderSticky } from "./page-header";
@@ -810,7 +810,7 @@ export { map }
 
 który następnie zaimportowałem do pliku `src/js/app.js`:
 
-<pre data-line="5,10"><code class="language-js">
+<pre   data-line="5,10"><code class="language-js">
 //src/js/_app.js
 
 import { pageHeaderSticky } from "./page-header";
@@ -826,7 +826,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 Jeżeli chcemy dodać nasz własny marker, do funkcji map dodamy:
 
-<pre data-line="14-32"><code class="language-js">
+<pre   data-line="14-32"><code class="language-js">
 const position = [20.99995, 52.23277];
 const token = "TWOJ_TOKEN";
 const styleUrl = "mapbox://styles/mapbox/light-v9";

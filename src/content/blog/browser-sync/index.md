@@ -20,13 +20,13 @@ Aby zainstalować Browsersync, potrzebujemy mięć zainstalowany NodeJS. O samej
 
 Browsersync instalujemy w zależności od potrzeb. Może to być instalacja per projekt, może być też globalna. Zacznijmy od tej drugiej. Zgodnie z <a href="https://www.browsersync.io/">oficjalną stroną</a> w terminalu wpisujemy:
 
-<pre><code class="language-js">
+<pre  class="line-numbers"><code class="language-js">
 npm i browser-sync -g
 </code></pre>
 
 Od tego momentu jeżeli w danym katalogu chcemy włączyć Browsersync, wpisujemy polecenie:
 
-<pre><code class="language-js">
+<pre  class="line-numbers"><code class="language-js">
 browser-sync start
 </code></pre>
 
@@ -42,7 +42,7 @@ Te dwa pozostałe adresy otwierają panel zarządzania daną instancją Browsers
 
 Od razu przy takim odpaleniu warto podać kilka dodatkowych parametrów, które opisane są na <a href="https://www.Browsersync.io/docs/command-line">tej stronie</a>:
 
-<pre><code class="language-js">
+<pre  class="line-numbers"><code class="language-js">
 browser-sync start --server --no-notify --files "**/*.html, **/*.css, **/*.js"
 </code></pre>
 
@@ -50,7 +50,7 @@ co spowoduje, że Browsersync otworzy naszą stronę w przeglądarce, ale też b
 Jeżeli je wykryje, odświeży naszą stronę. Dodatkowo za pomocą parametru `--no-notify` wyłączyliśmy upierdliwe powiadomienie o tym, że strona została przeładowana (które normalnie pojawia się w prawym górnym rogu strony).
 Parametry na powyższej stronie warto sobie przejrzeć, bo dla przykładu jeżeli chcemy zmienić domyślną przeglądarkę, wystarczy dodać parametr:
 
-<pre><code class="language-js" data-lines="">
+<pre  class="line-numbers"><code class="language-js" data-lines="">
 --browser "Firefox"
 </code></pre>
 
@@ -81,7 +81,7 @@ Ja używamy dwóch terminali. Jeden to <a href="https://cmder.net/">Cmder</a> a 
 Na powyższej stronie jest opisane jak oficjalnie je zrobić, ale szczerze mówiąc jest na to bardzo prosta metoda. W katalogu, w którym amym Cmder edytujemy plik `config/user_aliases.cmd`.
 Na jego końcu dodałem do niego linijkę:
 
-<pre><code class="language-js">
+<pre  class="line-numbers"><code class="language-js">
 bs=browser-sync start --server --no-notify --files "**/*.html, **/*.css, **/*.js"
 </code></pre>
 
@@ -92,7 +92,7 @@ W terminalu możemy mieć odpalone różne środowiska. Zakładam więc, że mó
 Po pierwsze sprawdźmy sobie gdzie zapisany jest nasz profil. Wpisujemy `$profile`. Wyskoczy nam ścieżka do pliku. To właśnie w nim dodajemy nasze aliasy.
 Osobiście dodałem sobie w tym katalogu plik posh-git-alias **https://github.com/AlexZeitler/posh-git-alias** by mieć dodatkowo aliasy dla gita. Następnie w pliku który widzieliśmy w terminalu dodałem ścieżkę `. C:\Users\sciezka_do_katalogu_z_profilem\posh-git-alias.ps1`. W pliku znajdziesz funkcje z aliasami. Podobnie dodałem do niego własne np.
 
-<pre><code>
+<pre  class="line-numbers"><code>
 function bs() {
     browser-sync start --server --no-notify --host 192.168.0.24 --files "**/*.html, **/*.css, **/*.js"
 }
@@ -104,7 +104,7 @@ W artykule o <a href="https://kursjs.pl/kurs/es6/gulp" target="_blank">Gulpie</a
 
 Instalacja tamta działała na plikach HTML. Osobiście dość często działam też w PHP, dlatego czasami korzystam z ciut innej konfiguracji:
 
-<pre><code class="language-js">
+<pre  class="line-numbers"><code class="language-js">
 ...
 const browserSync = require("browser-sync").create();
 
