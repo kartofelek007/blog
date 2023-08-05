@@ -1,23 +1,63 @@
 ---
-import { CollectionEntry, getCollection } from 'astro:content';
-import BlogPost from '../../layouts/BlogPost.astro';
-
+import {getCollection} from 'astro:content';
 import '../../styles/prism.scss';
 import '../../styles/pre-theme.scss';
+import Header from "../../components/Header.astro";
+import BaseHead from "../../components/BaseHead.astro";
+import Footer from "../../components/Footer.astro";
 
 export async function getStaticPaths() {
-	const posts = await getCollection('blog');
-	return posts.map((post) => ({
-		params: { slug: post.slug },
-		props: post,
-	}));
+    const posts = await getCollection('blog');
+    return posts.map((post) => ({
+        params: {slug: post.slug},
+        props: post,
+    }));
 }
-type Props = CollectionEntry<'blog'>;
 
 const post = Astro.props;
-const { Content } = await post.render();
+const {Content} = await post.render();
 ---
 
-<BlogPost {...post.data}>
-	<Content />
-</BlogPost>
+<html lang="en">
+<head>
+    <BaseHead title={post.data.title} description={post.data.description}/>
+</head>
+
+<body>
+<Header/>
+<main>
+    <article>
+        <h1 class="title">{post.data.title}</h1>
+        <div class="content">
+            <Content/>
+        </div>
+        <script
+                is:inline
+                src="https://giscus.app/client.js"
+                data-repo="kartofelek007/blog"
+                data-repo-id="R_kgDOJyT5_Q"
+                data-category="General"
+                data-category-id="DIC_kwDOJyT5_c4CYWiT"
+                data-mapping="title"
+                data-strict="0"
+                data-reactions-enabled="1"
+                data-emit-metadata="0"
+                data-input-position="bottom"
+                data-theme="preferred_color_scheme"
+                data-lang="pl"
+                crossorigin="anonymous"
+                async>
+        </script>
+    </article>
+</main>
+<Footer/>
+<script is:inline>
+    const pre = document.querySelectorAll("pre code");
+    pre.forEach(el => {
+        el.innerHTML = el.innerHTML.replace(/^\n(.*)/m, '$1');
+    })
+</script>
+<script src="/plugins/prism.js" is:inline></script>
+<script src="/app.js" is:inline></script>
+</body>
+</html>
