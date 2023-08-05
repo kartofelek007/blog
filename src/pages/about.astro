@@ -1,16 +1,29 @@
 ---
 import Layout from '../layouts/BlogPost.astro';
+import Header from "../components/Header.astro";
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import {SITE_DESCRIPTION, SITE_TITLE} from "../consts";
 ---
 
-<Layout
-        title="About Me"
-        pubDate={new Date('August 08 2021')}
->
-    <img src="/md.jpg" alt="ja" style="max-width: 300px"/>
-    <p>
-        Miłośnik tworzenia stron, szczególnie klasycznego dłubania w CSS ❤️❤️❤️, lubi rysować i tworzyć różnorakie
-        pierdoły na komputerze.
-        Jak sam mówi - uwielbia sporty wszelakie, ma super psa i podłego kota.
-    </p>
-    <h2>Więcej na: <a href="https://domanart.pl">domanart.pl</a></h2>
-</Layout>
+<html lang="en">
+<head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+</head>
+
+<body>
+<Header/>
+<main>
+    <article>
+        <img src="/md.jpg" alt="ja" style="max-width: 300px"/>
+        <p>
+            Miłośnik tworzenia stron, szczególnie klasycznego dłubania w CSS ❤️❤️❤️, lubi rysować i tworzyć różnorakie
+            pierdoły na komputerze.
+            Jak sam mówi - uwielbia sporty wszelakie, ma super psa i podłego kota.
+        </p>
+        <p>Więcej na: <a href="https://domanart.pl">domanart.pl</a></p>
+    </article>
+</main>
+<Footer/>
+</body>
+</html>
