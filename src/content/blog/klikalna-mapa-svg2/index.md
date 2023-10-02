@@ -14,11 +14,11 @@ Do przygotowania mapy centrum skorzystałem z Adobe Ilustratora. Tak naprawdę m
 
 Nie ważne jaki program użyjesz, elementy interaktywne trzeba jakoś potem wyłapać. Dlatego tworząc takie SVG albo daj interaktywnym elementom nazwy które są tworzone pod jakąś wspólny wzór (np. shop_...) albo zgrupuj je wszystkie pod jedną warstwą. Na poniższym screenie ja wszystkim kształtom (sklepom) dałem podobną nazwę, ale ważniejsze jest, że wszystkie kształty sklepów są zgrupowane w warstwie "sklepy". Numery, dodatkowe ikonki, napisy itp wydzieliłem do innych warstw. I tak z nich nie będę korzystał.
 
-![](warstwy-slepow.png)
+![](./warstwy-slepow.png)
 
 Wygenerowaną grafikę wyeksportowałem do SVG za pomocą opcji File->Export.
 
-![](exportowanie.png)
+![](./exportowanie.png)
 
 Plik AI i wstępny svg możesz pobrac <a href="http://domanart.pl/dema/mapa-svg2/mapa-sklepow.zip">tutaj</a>.
 
@@ -37,13 +37,13 @@ Po drugie w powyższym kodzie zamieniłem wszystkim sklepom id na data-id dodaj�
 By to zrobić w edytorze wyszukując ciąg znaków (CTRL + R lub CTRL + H) włączyłem <a href="http://kursjs.pl/kurs/regular.php">wyrażenia regularne</a>:
 
 phpStorm:
-![](regexp-search1.png)
+![](./regexp-search1.png)
 
 Vistual Studio Code:
-![](regexp-search2.png)
+![](./regexp-search2.png)
 
 Sublime Text:
-![](regexp-search3.png)
+![](./regexp-search3.png)
 
 Następnie wyszukałem <code>&lt;(g|path|rect|polygon|circle|text|defs|title|style|\/g|\/style|\/defs)</code> i zamieniłem na <code>\n<$1$2</code>
 

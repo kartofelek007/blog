@@ -11,7 +11,7 @@ Jakiś czas temu na grupie facebookowej mój były kursant zadał pytanie jak zr
 
 Wykres o którym mowa miał postać:
 
-<img src="./wykres.jpg">
+![](./wykres.jpg)
 
 Zanim przejdziemy do walki, dodajmy temu wpisowi trochę nastroju: https://www.youtube.com/watch?v=VE8vKLEK6A8
 

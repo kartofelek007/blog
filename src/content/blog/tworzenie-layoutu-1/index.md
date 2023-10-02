@@ -13,7 +13,7 @@ Poniższy tekst jest opisem warsztatu, jaki kiedyś wykonywaliśmy na zajęciach
 ## Przygotowanie do pracy
 Layout o którym będzie mowa wygląda tak (klik by powiększyć):
 
-<a href="love-the-music.jpg" target="_blank">![](love-the-music-thumb.jpg)</a>
+<a href="love-the-music.jpg" target="_blank">![](./love-the-music-thumb.jpg)</a>
 
 Na górze mamy główny baner z wyśrodkowanymi elementami i nawigacją. Nawigacja będzie przypięta do góry ekranu i będzie się zmieniać przy skrolowaniu. Tekst w banerze będzie animowany. Dalej mamy jakieś kolumny, element z paralaxem, formularz kontaktowy i stylowaną google mapa. Z tym ostatnim po <a href="https://www.reddit.com/r/webdev/comments/8gkmeo/starting_google_maps_platform_arrives_with/">ostatnich decyzjach Googla</a> może być problem, ale to zobaczymy w praniu. Naszym celem jest zrobienie wszystkiego od początku do końca. Żadnego lania wody, realna praca.
 
@@ -787,7 +787,7 @@ Ale co zrobić z wartościami stroke? Każda litera ma zupełnie inną. Można t
 
 Do takiego przerzucania wartości w kodzie przydaje się fajna opcja w Sublime Text czy Visual Studio Code, gdzie stawiamy kursor w danym miejscu i za pomocą Ctrl + Alt + strzałek góra-dół możemy zaznaczać wiele wierszy równocześnie. Potem tylko copy pasta i mamy listę.
 
-![](multi-cursor.gif)
+![](./multi-cursor.gif)
 
 Poniższy kod to w zasadzie połączenie kilku technik.
 Wykorzystanie listy wraz z <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#nth-instance_method">nth()</a> do przetrzymywania i pobierania wartości, interpolacja <a href="https://webdesign.tutsplus.com/tutorials/all-you-ever-need-to-know-about-sass-interpolation--cms-21375">#{}</a> do generowania nazw klas, czy bezpieczne mnożenie, gdzie jednostkę wyrzucam poza nawias (bo 1px*1px daje w rezultacie 1px*px).
@@ -1099,7 +1099,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 Po stworzeniu powyższych czynności w konsoli terminala powinna pojawić się informacja o zakończonej kompilacji:
 
-![](webpack-first-script.png)
+![](./webpack-first-script.png)
 
 Jak masz wysoki monitor to pewnie ciężko będzie ci sprawdzić przewijanie strony która zajmuje co najwyżej jeden ekran. Dla testu w html tuż przed zamknięciem body dodaj długi tekst. Najłatwiej to zrobić poprzez wpisanie tam <code>lorem1000</code> i naciśnięcie klawisza <strong>Tab</strong>. Żeby ten trik zadziałał trzeba mieć zainstalowanego <a href="https://www.youtube.com/watch?v=5BIAdWNcr8Y">Emmeta</a>. Edytory takie jak <a href="http://domanart.pl/visual-studio-code">Visual Studio Code</a>, WebStorm, PHPStorm mają go domyślnie. W innych trzeba sobie <a href="https://emmet.io/download/">doinstalować</a>. Ewentualnie wejdź w necie na <a href="https://loremipsumgenerator.com/">dowolną stronę z lorem</a> i skopiuj sobie taki testowy tekst...
 
@@ -1150,7 +1150,7 @@ Pozostały nam dwie ostatnie rzeczy by skończyć nagłówek. Pierwsza z nich to
 Pierwsze pod ostrze idzie dolne wykończenie. Po pierwsze musimy tą "belkę"" przypiąć na dole <strong>.main-hero</strong> banera. Moglibyśmy tutaj spokojnie użyć pozycjonowania absolutnego, ale my zrobiliśmy dla tej belki miejsce za pomocą grida.
 Po przypięciu musimy ją podzielić na 3 części.
 
-![](layout-main-header-bottom.jpg)
+![](./layout-main-header-bottom.jpg)
 
 Na środku grafika z wyciętą dziurą, a po bokach białe zaślepki. Grafikę z wyciętą dziurą zrobimy za pomocą svg. Masz ją w templatce w <strong>dist/images/banner-bottom.svg</strong>
 
@@ -1224,7 +1224,7 @@ a w pliku <strong>src/scss/components/_main-banner.scss</strong> dodajemy:
 Yhy. Tak naprawdę prosta ikonka podpowiadająca nam, że można naszą stronę przewijać.
 Już w poprzednim tekście pokazywałem wam <a href="http://domanart.pl/mini-trening-animacji/">o wiele bardziej zaawansowane</a>.
 
-![](scroll-indicator.png)
+![](./scroll-indicator.png)
 
 Wpierw dodajemy ją do naszego banera:
 

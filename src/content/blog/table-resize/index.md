@@ -10,7 +10,7 @@ Jakiś czas temu miałem za zadanie zrobienie tabeli z rozszerzanymi kolumnami i
 
 W ramach treningu za pomocą <a href="http://jqueryui.com/resizable/">jquery ui resizable</a> zrobimy dla tabeli mechanizm znany z okien windowsa. Jeżeli masz pod ręką okienko jakiegoś folderu w windowsie sprawdź jak się ten mechanizm zachowuje. A jak nie, to poświęciłem kawałek swojego życia i nagrałem dla ciebie naturę takich okien:
 
-![](table-resize-example.gif)
+![](./table-resize-example.gif)
 
 Ogólnie można zauważyć kilka cech tego mechanizmu:
 
@@ -431,7 +431,7 @@ Jeżeli teraz takiej tabeli ustawimy bardzo małą szerokość - np. 0, komórki
 
 W niektórych przeglądarkach (poza FF) występuje jakaś desynchronizacja. Szczególnie widać to w przeglądarce Safari:
 
-![](blad-synchronizacji-kolumn.png)
+![](./blad-synchronizacji-kolumn.png)
 
 Jak się okazuje, podczas zmiany rozmiaru kolumn kod:
 

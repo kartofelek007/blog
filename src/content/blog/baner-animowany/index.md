@@ -22,7 +22,7 @@ No ale ok. Powiedzmy, że <a href="https://pl.pinterest.com/search/pins/?q=mobil
 
 W rezultacie załóżmy, że stworzyliśmy plan na stworzenie czegoś takiego:
 
-![](preview.jpg)
+![](./preview.jpg)
 
 Całość ma być oczywiście animowana.
 
@@ -36,7 +36,7 @@ Ja do tego celu skorzystam z <a href="https://github.com/">GitHuba</a>, ale spok
 Będąc już zalogowanym tworzymy nowe repozytorium klikając na zielony przycisk New repository (lub przechodząc na stronę <a href="https://github.com/new">https://github.com/new</a>).
 Ustawiamy opcje mniej więcej jak na poniższym screenie.
 
-![](github.png)
+![](./github.png)
 
 *Repository name* - nazwa repozytorium - ja wpisałem "banner-wakacje"
 
@@ -62,7 +62,7 @@ Pamiętaj, że na windowsie utworzenie takiego pliku w normalny sposób będzie 
 
 Klikam na "Create repository". Utworzyło nam repozytorium z 2 plikami.
 
-![](github2.png)
+![](./github2.png)
 
 Teraz je klonujemy, i zaczynamy pracę właściwą. Pobieram więc adres do klonowania poprzez prawy zielony przycisk na stronie i w konsoli na komputerze wpisuję
 
@@ -93,7 +93,7 @@ Musimy jeszcze ściągnąć paczkę grafik, z których będziemy korzystać.
 Paczkę rozpakowujemy do głównego katalogu.
 Nasza struktura projektu powinna teraz wyglądać tak:
 
-![](struktura-projektu.png)
+![](./struktura-projektu.png)
 
 Całość dodajemy do gita i wrzucamy do repozytorium:
 
@@ -215,7 +215,7 @@ Spójrz jeszcze raz na grafikę poglądową. Niekóre drzewa od razu są widoczn
 Tylko jak przenieść takie drzewo z lewa na prawo? Sama zmiana pozycji z -200px na 900px nie zadziała jak należy, bo wtedy zobaczymy przelatujący z gwiezdną szybkością przez baner niezidentyfikowany obiekt koloru zielono brązowego (i bynajmniej nie będzie to Hulk).
 Trzeba by więc przed takim przeniesieniem ustawić na chwilę opacity 0, a potem po przeskoku znowu je przywrócić.
 
-![](animacja1fix.gif)
+![](./animacja1fix.gif)
 
 Animacja w css teoretycznie mogła by więc wyglądać mniej więcej tak:
 
@@ -258,7 +258,7 @@ Problem z tym podejściem jest taki, że znowu mamy tutaj konkretne pozycje drze
 
 Ale i tutaj możemy zastosować pewną sztuczkę - znaną twórcom gier. Wystarczy, że zrobimy dwie takie same plansze z elementami, które będziemy odpowiednio przemieszczać:
 
-![](animacja2fix.gif)
+![](./animacja2fix.gif)
 
 Poniżej już poprawny kod - można przepisywać:
 

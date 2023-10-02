@@ -37,7 +37,7 @@ Do stworzenia wektorowej mapy skorzystałem z Ilustratora, ale w darmowym <a hre
 <strong>Kilka uwag co do samego tworzenia svg:</strong>
 Ważne by odpowiednio nazywać "ścieżki", czyli fragmenty/składowe warstw. W naszym przykładzie kolejnym ścieżkom daliśmy nazwy województw.
 
-![](svg-ilustrator-warstwy.png)
+![](./svg-ilustrator-warstwy.png)
 
 Jest to o tyle ważne, że potem te nazwy trafią do kodu wygenerowanego pliku svg, i to właśnie po nich będziesz identyfikować odpowiednie ścieżki.
 Pamiętaj, że możesz tworzyć tak zwane złożone kształty (compound path). Jeżeli pojedyncza ścieżka ma się składać z kilku oddzielnych, nie stykających się z sobą części, tworzymy ją za pomocą Object->Compound Path->Make (Ctrl + 8). W programie Inkscape są to klawisze Ctrl + K. Możemy też utworzyć grupę (Ctrl + G) - zależnie od potrzeb. Tutaj mała uwaga. Jeżeli zdecydowałeś się na użycie biblioteki raphael, stosuj raczej Compound Path, a nie grupy, ponieważ biblioteka ta grup nie obsługuje (ale można to zasymulować za pomocą tablic).
@@ -46,7 +46,7 @@ I w zasadzie tyle. Przerobiony przygotowany do eksportu plik możesz pobrać <a 
 
 Gdy nasz plik jest gotowy, klikamy File->Export i wybieramy SVG. Zaznaczamy opcję Use Artboards.
 
-![](svg-ilustrator-export.png)
+![](./svg-ilustrator-export.png)
 
 Potem klikamy OK i dostajemy gotowy plik SVG. I to tyle...
 Niezupełnie. Plik ten musimy teraz zamienić na odpowiedni kod dla JS. Moglibyśmy działać na czystym kodzie svg, ale kontrola nad takim cudem może w przyszłości być nieco utrudniona.
@@ -216,7 +216,7 @@ Mapę z interakcją możesz zobaczyć <a href="http://domanart.pl/dema/mapa-svg/
 
 Jeżeli jesteś uważny, zauważysz, że niektóre ścieżki po najechaniu mają jakieś dziwne obramowanie.
 
-![](mapka-border.png)
+![](./mapka-border.png)
 
 Spowodowane jest to tym, że niektóre ścieżki leżą poniżej innych (zasada ta sama co z z-index). Aby to naprawić powinniśmy wskazaną ścieżkę przenosić na samą górę warstw, a ścieżkę którą opuszczamy kursorem przenosić na sam spód. W bibliotece raphael.js służyły do tego metody toFront() i toBack(). <a href="https://github.com/adobe-webplatform/Snap.svg/issues/121">Niestety w snapsvg ich nie ma</a>, dlatego musimy je więc dopisać. Gdzieś na początku naszego kodu dodajemy kod:
 

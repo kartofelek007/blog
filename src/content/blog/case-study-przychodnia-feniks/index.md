@@ -46,11 +46,11 @@ Po zebraniu wielu, wielu referencji (naprawdę wielu!) zacząłem robić pierwsz
 
 Do projektowania używałem zestawu Adobe XD + Ilustrator + Photoshop + kilku stron z darmowymi materiałami.
 
-<img src="./laptop-markup.jpg" alt="mockup strony">
+![](./laptop-markup.jpg)
 
 Tworzenie layoutów skończyłem się na <a href="./strona-glowna.jpg">czymś takim</a>. Przy okazji powstało kilka wersji banera i poprawione stare logo (którego mocno zmienić nie mogłem, bo jest już na nastu materiałach).
 
-<img src="logo.jpg" alt="">
+![](./logo.jpg)
 
 Wersji mobilnej już nie robiłem, zakładając, że ogarnę to już samym kodem.
 
@@ -58,7 +58,7 @@ Nie marnując czasu rozpocząłem tworzenie HTML, który potem miałem podpiąć
 
 No właśnie - tylko, że ja jestem stara szkoła wychowana na PHP i nie lubię jak jakieś automaty zabierają mi możliwości.
 
-<img src="./malpa-polak1.jpg" alt="małpa polak" />
+![](./malpa-polak1.jpg)
 
 Przy n-tym widoku stwierdziłem, że brakuje mi generowania powtarzalnego się contentu. Z jednej strony co za problem napisać w HTML jeden element, a potem go naście razy w kodzie skopiować. Wolałbym jednak generować taki kod za pomocą pętli, bo wtedy łatwiej wprowadzać zmiany i testować przypadki gdy elementów jest wiele. Nie chciałem tego robić za pomocą wymyślnych systemów templatek, a najprościej jak się da.
 
@@ -68,7 +68,7 @@ Cięcie layoutów poszło jak błyskawica. Pocięta strona znajduje się <a href
 
 Gdy pokazałem finalną wersję wybranym znajomym, pierwsze reakcje brzmiały mniej więcej "facebookowo, kolorowo". Faktycznie - strona bardziej przypomina reklamę karmy czy może akcji "przygarnij zwierzaka". Po pierwszym komentarzu siostry przyznałem jej 100% racji i postanowiłem całość przerobić. To poszło nieporównywalnie szybciej niż przy pierwotnej wersji.
 
-<img src="./laptop-markup2.jpg" alt="mockup strony">
+![](./laptop-markup2.jpg)
 
 Po przerobieniu layoutów (przy okazji przygotowaniu kilku wersji banera) przeszedłem do przerzucania kodu. Nie wszystko było jeden do jeden, bo niektóre części dla wersji mobilnej postanowiłem wykonać w formie slidera. Wybrałem tutaj <a href="https://swiperjs.com/">swiperjs</a>.
 
@@ -78,7 +78,7 @@ Po stworzeniu html mogłem już zacząć podpinanie pod CMS. Początkowo chciał
 
 Poniżej screen z przykładowego widoku:
 
-<img src="./admin.png" alt="widok panelu admina">
+![](./admin.png)
 
 Nie jest to najbardziej idealne rozwiązanie, ale działa. Niestety nasza branża składa się z masy ciemnych miejsc, o których unika się na co dzień rozmowy. Jednoosobowe budowanie ładnych paneli do realnych zastosować jest jednym z wielu takich miejsc.
 
