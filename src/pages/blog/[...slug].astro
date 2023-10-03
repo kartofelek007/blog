@@ -27,7 +27,9 @@ const {Content} = await post.render();
 <Header/>
 <main>
     <article>
-        <h2 class="title">{post.data.title}</h1>
+        <a class="back-link" href="/">Powrót</a>
+
+        <h1 class="title">{post.data.title}</h1>
         <div class="content">
             <Content/>
         </div>
