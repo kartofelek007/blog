@@ -18,7 +18,7 @@ let titleB = SITE_TITLE.split(".")[1];
 		</nav>
 	</div>
 </header>
-<style>
+<style lang="scss">
 	header {
 		border-bottom: 1px solid #EEF1FA;
 		position: fixed;
@@ -27,6 +27,8 @@ let titleB = SITE_TITLE.split(".")[1];
 		top: 0;
 		height: 100px;
 		transition: 0.3s height;
+		background: rgba(#F9FAFB, 0.7);
+		z-index: 100;
 	}
 
 	.header-container {
@@ -40,7 +42,7 @@ let titleB = SITE_TITLE.split(".")[1];
 	}
 
 	header.is-sticky {
-		backdrop-filter: blur(4px);
+		backdrop-filter: blur(2px);
 		height: 80px;
 	}
 
