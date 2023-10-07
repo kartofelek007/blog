@@ -7,8 +7,8 @@ body {
     background-color: #F9FAFB;
     word-wrap: break-word;
     overflow-wrap: break-word;
-    font-size: 1.1rem;
-    line-height: 1.6;
+    font-size: 1.15rem;
+    line-height: 1.8;
     color: #626B84;
     padding-top: 100px;
 }
@@ -58,7 +58,6 @@ a.back-link {
     display: inline-flex;
     gap: 10px;
     align-items: center;
-    margin-top: 40px;
     color: #666;
     margin-bottom: 15px;
     text-decoration: none;
@@ -86,6 +85,10 @@ a.back-link:hover::before {
 
 nav a {
     margin-right: 10px;
+}
+
+main {
+    margin-top: 40px;
 }
 
 textarea {
