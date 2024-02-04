@@ -34,7 +34,7 @@ Kiedyś ja im pomogłem, tym razem oni pomogli nam biorąc na barki całe leczen
 
 Wracając do gwoździa programu. Szczerze mówiąc nie za bardzo miałem wenę do ruszenia tego layoutu. W pewnym momencie nawet stworzyłem wątek na Facebookowej grupie dla grafików o lekkie zmodyfikowanie strony głównej - cobym mógł złapać kierunek. Niestety oferty które dostałem w komentarzach troszkę mnie odrzuciły.
 
-<img src="./dog.jpg" alt="super pies">
+![](./dog.jpg)
 
 Pozostało zakasać rękawy i samemu coś pokombinować. Mam teraz trochę więcej czasu, więc mogłem popracować z tym zadaniem.
 

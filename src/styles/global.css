@@ -4,7 +4,7 @@ body {
     padding: 0 20px;
     max-width: 65ch;
     text-align: left;
-    background-color: #F9FAFB;
+    background-color: #fff;
     word-wrap: break-word;
     overflow-wrap: break-word;
     font-size: 1.15rem;
@@ -164,10 +164,16 @@ iframe {
 .demo {
     font-weight: bold;
     text-decoration: none;
-    padding: 15px;
+    padding: 1rem;
     border-radius: 2px;
     background: #222;
     color: #fff;
     display: block;
     text-align: center;
+}
+
+img {
+    margin: 1rem auto;
+    display: block;
+    border-radius: 4px;
 }
