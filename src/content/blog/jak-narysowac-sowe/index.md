@@ -72,7 +72,7 @@ Niestety w momencie pisania tego tekstu shadery są dla mnie magią, dlatego oś
 
 ## Jak narysować sowę?
 
-No więc jak narysować sowę? Prosta sprawa. Na początku rysujemy kółeczka.
+No więc jak narysować sowę? Prosta sprawa. Na początku rysujemy koła.
 
 ...a potem całą resztę.
 
