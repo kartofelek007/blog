@@ -26,23 +26,25 @@ Na jednej z wersji kumpel wrzucił w baner jakąś kulę.
 
 Pomyślałem sobie, że może dobrym pomysłem było by, gdyby taki baner wprowadzić w ruch? Wygenerowanie takiej animacji w Blender3D nie powinno być wielkim wyzwaniem. A jeżeli to nie wyjdzie, to nauczę się ThreeJS.
 
-Wpierw przygotowałem w programie graficznym odpowiednią animację. Efekt meh, ale to miał być tylko prosty koncept pokazujący idee:
+Wpierw przygotowałem w programie graficznym odpowiednią animację. Efekt meh, ale miał to być tylko prosty koncept pokazujący idee takiej kuli:
 
 <video controls mute>
   <source src="/blog/jak-narysowac-sowe/test0001.mp4">
 </video>
 
-W międzyczasie przygotowałem też wersję w ThreeJS. Znowu było to bardzo prosty koncept <a href="/blog/jak-narysowac-sowe/demo/index.html" target="_blank">takiej animacji</a>.
+W międzyczasie w ramach eksperymentu przygotowałem też wersję w ThreeJS. Znowu było to bardzo prosty koncept <a href="/blog/jak-narysowac-sowe/demo/index.html" target="_blank">takiej animacji</a>.
 
 Cały temat niestety zamarł.
 
-Pomyślałem sobie, że w sumie sam koncept planety na tyle mi się podoba, że  poświęcę mu jeszcze trochę czasu.
+Pomyślałem sobie, że w sumie pomysł na tyle mi się podoba, że poświęcę mu jeszcze trochę czasu.
 
-Po wielu commitach dalej pracę zakończyłem bogatszy w doświadczenie zwiazane z Blenderem, ThreeJS, shaderami itp.
+Po wielu commitach pracę zakończyłem bogatszy w doświadczenie zwiazane z Blenderem, ThreeJS, Shaderami i podobnymi rzeczami.
 
 <a href="https://portfolio.domanart.pl" target="_blank" class="demo">tutaj efekt końcowy</a>
 
-Wpis ten miałem być jednak o tym, jak narysować sowę? Bardzo prosto. Na początku rysujemy kółeczko, w zasadzie kulę na czarnym tle.
+Ale hola, hola.
+
+Wpis ten miał być o tym, jak narysować sowę. Bardzo prosto. Na początku rysujemy kółeczko, a w zasadzie kulę na czarnym tle.
 
 ...a potem całą resztę.
 
