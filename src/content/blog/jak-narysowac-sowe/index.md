@@ -32,7 +32,7 @@ Wpierw przygotowałem w programie graficznym odpowiednią animację. Efekt meh, 
   <source src="/blog/jak-narysowac-sowe/test0001.mp4">
 </video>
 
-W międzyczasie przygotowałem też wersję w ThreeJS. Znowu było to bardzo prosty koncept <a href="/blog/jak-narysowac-sowe/index.html" target="_blank">takiej animacji</a>.
+W międzyczasie przygotowałem też wersję w ThreeJS. Znowu było to bardzo prosty koncept <a href="/blog/jak-narysowac-sowe/demo/index.html" target="_blank">takiej animacji</a>.
 
 Cały temat niestety zamarł.
 
