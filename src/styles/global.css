@@ -1,3 +1,7 @@
+:root {
+    --color-link: #0E52F1;
+}
+
 body {
     font-family: "Poppins", Verdana, sans-serif;
     margin: auto;
@@ -32,7 +36,7 @@ b {
 }
 
 a {
-    color: #0E52F1;
+    color: var(--color-link);
     text-decoration: none;
     font-weight: 500;
 }
@@ -164,16 +168,26 @@ iframe {
 .demo {
     font-weight: bold;
     text-decoration: none;
-    padding: 1rem;
-    border-radius: 2px;
-    background: #222;
+    padding: 1rem 3rem;
+    border-radius: 4px;
+    background: var(--color-link);
+    width: max-content;
+    margin: 2rem auto;
     color: #fff;
     display: block;
     text-align: center;
+
+    &:hover {
+        text-decoration: none;
+    }
 }
 
-img {
+img, video, canvas {
     margin: 1rem auto;
     display: block;
     border-radius: 4px;
+    max-width: 100%;
+    height: auto;
+    max-width: 100%;
+    height: auto;
 }

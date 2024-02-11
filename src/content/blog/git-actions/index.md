@@ -12,8 +12,6 @@ Ekspertem od tego nie jestem. Z tego co zauważyłem, buduje się je z gotowych 
 
 Wpierw wszedłem na https://github.com/USERNAME/blog/actions/new
 
-<img src="FjK16ikIFf.png" alt="">
-
 Następnie kliknąłem na górze strony w "set up a workflow yourself" (tuż pod tytułem). Następnie korzystając z przykłądów w necie, nastu commitach z poprawkami doszedłem do czegoś takiego:
 
 <pre class="line-numbers"><code class="language-js">
