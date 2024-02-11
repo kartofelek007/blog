@@ -26,7 +26,7 @@ Na jednej z wersji kumpel wrzucił w baner jakąś kulę.
 
 Pomyślałem sobie, że może dobrym pomysłem było by, gdyby taki baner wprowadzić w ruch? Wygenerowanie takiej animacji w Blender3D nie powinno być wielkim wyzwaniem. A jeżeli to nie wyjdzie, to nauczę się ThreeJS.
 
-Wpierw przygotowałem w programie graficznym odpowiednią animację. Efekt meh, ale miał to być tylko prosty koncept pokazujący idee takiej kuli:
+Wpierw przygotowałem w programie graficznym odpowiednią animację. Efekt meh, ale miał to być tylko prosty koncept pokazujący idee takiej animacji:
 
 <video controls mute>
   <source src="/blog/jak-narysowac-sowe/test0001.mp4">
