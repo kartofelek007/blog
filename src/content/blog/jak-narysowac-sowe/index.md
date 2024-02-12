@@ -5,7 +5,7 @@ tags: ["threejs"]
 ---
 
 Jakiś czas temu moja siostra poprosiła mnie bym nieco zboostował jej layout pewnej strony.
-Wraz z grafikiem przygotowaliśmy jej kilka wariacji.
+Krótka prosta robotka, bez zbytniego zaangażowania. Wraz z grafikiem przygotowaliśmy jej kilka wariacji.
 
 <style>
   .images-2 {
@@ -37,7 +37,7 @@ W międzyczasie w ramach eksperymentu przygotowałem też wersję w ThreeJS. Zno
 
 Cały temat niestety umarł śmiercią naturalną.
 
-Pomyślałem więc, że go przejmę do własnych eksperymentów, a przy okazji pouczę się ThreeJS.
+Pomyślałem więc, że go przejmę do własnych eksperymentów, a przy okazji podszkolę się w ThreeJS.
 Naście commitów dalej udało mi się uzyskać coś takiego:
 
 <a href="https://portfolio.domanart.pl" target="_blank" class="demo">Efekt końcowy</a>
